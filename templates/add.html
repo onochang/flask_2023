@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="app-title"><a href="/">My Task</a></h1>
+        <div class="member-menu">
+            <a href="/add" class="menu-link">タスクを追加する</a>
+            <a href="" class="menu-link">ログアウト</a>
+        </div>
+    </header>
+    <main>
+        <div class="task-container">
+            <form class="form" action="/add" method="POST">
+                <div class="input-item">
+                    <label for="name">タスク入力フォーム</label>
+                    <input type="text" id="name" name="task">
+                </div>
+                <input class="btn btn-primary" type="submit" value="タスクを追加する">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
