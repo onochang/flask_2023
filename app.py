@@ -1,5 +1,5 @@
 # flaskモジュールからFlaskクラスをインポート
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 # sqlite3をインポート
 import sqlite3
 # Flaskクラスをインスタンス化してapp変数に代入
@@ -40,9 +40,20 @@ def add_post():
     conn.commit()
     # データベースの接続を終了
     c.close()
-    return "入力を受け付けました。"
+    return redirect("/list")
 
 # ----------------------------------------------------------
+
+@app.route("/list")
+def list_get():
+    conn = sqlite3.connect("myTask.db")
+    c = conn.cursor()
+    c.execute("select id, task from task")
+    task_list = []
+    for row in c.fetchall():
+        task_list.append({"id":row[0], "task":row[1]})
+    c.close
+    return render_template("list.html", task_list = task_list)
 
 
 # スクリプトとして直接実行した場合

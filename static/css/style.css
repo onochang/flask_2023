@@ -98,6 +98,65 @@ input {
     color: #409393;
 }
 
+/* list.html */
+.page-head{
+    margin-top: 120px;
+    margin-bottom: 60px;
+    color: #409393;
+    font-size: 24px;
+    text-align: center;
+}
+
+.list-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.card-wrap{
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card{
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 6px #cccccc;
+}
+
+.task-title{
+    margin-bottom: 15px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.icon-wrap{
+    display: flex;
+    column-gap: 12px;
+    justify-content: end;
+}
+
+.circle{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #409393;
+    text-align: center;
+    line-height: 32px;
+}
+
+.fa-pen,.fa-trash{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+
 /* add.html & edit.html */
 
 .task-container {
