@@ -98,6 +98,16 @@ input {
     color: #409393;
 }
 
+/* index.html */
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background: url("../img/background.jpg") center center no-repeat;
+    background-size: cover;
+}
+
 /* list.html */
 .page-head{
     margin-top: 120px;

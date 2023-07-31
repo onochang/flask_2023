@@ -8,8 +8,8 @@
             <div class="card">
                 <p class="task-title">{{task["task"]}}</p>
                 <div class="icon-wrap">
-                    <a href="" class="circle"><i class="fa-solid fa-pen"></i></a>
-                    <a href="" class="circle"><i class="fa-solid fa-trash"></i></a>
+                    <a href="/edit/{{task['id']}}" class="circle"><i class="fa-solid fa-pen"></i></a>
+                    <a href="/delete/{{task['id']}}" class="circle"><i class="fa-solid fa-trash"></i></a>
                 </div>
             </div>
             {% endfor %}
