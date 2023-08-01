@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <h2 class="page-head">Onochangのタスク一覧</h2>
+    <h2 class="page-head">{{user_name}}のタスク一覧</h2>
     <div class="list-container">
         <div class="card-wrap">
             {% for task in task_list %}
